@@ -3,6 +3,7 @@ services:
   redis-server:
     image: 'redis'
   node-app:
+    restart: always # incase of any failure will always restart the server
     build: .
     ports: 
       - "3000:8081"
